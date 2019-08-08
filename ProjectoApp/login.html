@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> PROJECT APP </title>
+    <style dtype="text/css">
+        body {
+            color: black;
+            background-image: url(fondo.jpeg);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <input type="button" id="reg_btn_notas" value="Ingresar Notas">
+        <input type="button" id="reg_btn_consultar" value="Consultar">
+        <input type="button" id="reg_btn_salirEstudiante" value="Salir Cuenta">
+        <input type="button" id="reg_btn_salirDocente" value="Salir Cuenta">
+    </ul>
+    <div id="interes">
+        <center>
+            <h1> PROJECT APP </h1>
+            <table border="1">
+                <tr>
+                    <td> Nombre del proyecto</td>
+                    <td> Descripcion del proyecto </td>
+                    <td> 1° Entrega </td>
+                    <td> 2° Entrega </td>
+                    <td> Nota Final </td>
+                </tr>
+                <tr>
+                    <td id="tema1">Nombre</td>
+                    <td id="descripcion1">Descripcion</td>
+                    <td><a id="entrega01" href="">Primer Entregable</a></td>
+                    <td id="entrega02"><a href="file:///E:/ProjectApp2/ProjectoApp/uml.pdf">Primer Entregable</a></td>
+                    <td id="notaFinal">Nota</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <label> Nombre del usuario </label>
+            <input type="text" name="usuario1" id="usuario1" required>
+            <br>
+            <br>
+            <label for="tema"> Nombre del proyecto </label>
+            <input type="text" name="tema" id="tema" required>
+            <br>
+            <br>
+            <label for="descripcion"> Descripcion del proyecto </label>
+            <input type="text" name="descripcion" id="descripcion">
+            <br>
+            <br>
+            1° Entrega: <input type="file" id="1entrega" name="1entrega" />
+            <br><br>
+            2° Entrega: <input type="file" id="2entrega" name="2entrega">
+            <br>
+            <br>
+            <input type="button" name="btnEnviar" id="btnEnviar" value="Enviar">
+        </center>
+    </div>
+    <div id="interdo">
+        <br><br>
+            <input type="text" name="rEstudiantes" id="rEstudiantes">
+            <input type="button" value="Buscar Estudiantes" id="btn_estudiantes">
+        <center>
+            <h1> PROJECT APP </h1>
+            
+            <table border="1">
+                <tr>
+                    <td><strong>Nombre del proyecto</strong></td>
+                    <td><strong>Descripcion del proyecto</strong></td>
+                    <td><strong>1° Entrega</strong></td>
+                    <td><strong>2° Entrega</strong></td>
+                    <td><strong>Primera Nota</strong></td>
+                    <td><strong>Segunda Nota</strong></td>
+                    <td><strong>Defensa Proyecto</strong></td>
+                    <td><strong>Nota Final</strong></td>
+                </tr>
+                <tr>
+                    <td id="temaEstudiante">Nombre</td>
+                    <td id="descripcionEstudiante">Descripcion</td>
+                    <td><a id="entregaEstudiante01" href="">Primera Entrega</a></td>
+                    <td><a id="entregaEstudiante02" href="">Segunda Entrega</a></td>
+                    <td id="notaPrimera1">/100</td>
+                    <td id="notaSegunda2">/100</td>
+                    <td id="notaTercera3">/100</td>
+                    <td id="notaFina">/100</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <label type="text" id="entregaEstudiante1" name="1entrega">1° Entrega ==>> </label> Nota: <input
+                type="number" id="nota1" name="nota1" required>
+            <br>
+            <br>
+            <label type="file" id="entregaEstudiante2" name="2entrega">2° Entrega =>> </label> Nota:<input type="number"
+                id="nota2" name="nota2" required>
+            <br>
+            <br>
+            <label for="defensa"> Defensa del proyecto =>> </label> Nota:<input type="number" id="nota3" name="nota3"
+                required>
+            <br>
+            <br>
+
+            <input type="button" name="Enviar" id="btnEnviarDocente" value="Enviar">
+        </center>
+    </div>
+    <div id="registro">
+        <center>
+            <h1>Registrarse en el sistema</h1>
+            <p>Ingrese la información solicitada</p>
+            Nombres: <input type="text" name="reg_nombre" id="reg_nombre" required>
+            <br><br>
+            Apellidos: <input type="text" name="reg_apellido" id="reg_apellido" required>
+            <br><br>
+            Cedula de Identidad: <input type="number" name="reg_cedula" id="reg_cedula" required>
+            <br><br>
+            Correo Institucional: <input type="email" name="reg_correo" id="reg_correo" required>
+            <br><br>
+            Usuario: <input type="text" name="reg_usuario" id="reg_usuario" required>
+            <br><br>
+            Clave: <input type="password" name="reg_clave" id="reg_clave" required>
+            <br><br>
+            Rol de Usuario:<select name="reg_rol" id="reg_rol">
+                <option selected>Docente</option>
+                <option>Estudiante</option>
+            </select>
+            <br><br>
+            Semestre:<select name="reg_semestre" id="reg_semestre">
+                <option selected>Primero</option>
+                <option>Segundo</option>
+                <option>Tercero</option>
+                <option>Cuarto</option>
+                <option>Quinto</option>
+            </select>
+            <br> <br>
+            Jornada:<select name="reg_jornada" id="reg_jornada">
+                <option selected>Matutina</option>
+                <option>Vespertina</option>
+            </select>
+            <br>
+            <br>
+            Paralelo<select name="reg_paralelo" id="reg_paralelo">
+                <option selected>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <br>
+            <br>
+            <input type="button" value="Crear Usuario" id="btnCrearUsuario">
+            <br>
+            <br>
+            <p id="reg_bienvenido">
+                <input type="button" value="Iniciar Sesión" id="">
+            </p>
+        </center>
+    </div>
+    <div id="login">
+        <center>
+            <br><br><br><br><br>
+            <table border="1" height="150" width="450" id="tabla">
+                <tr>
+                    <td align="center">
+                        <img width="180" src="logo.png">
+                        <h1>Iniciar Sesión</h1>
+                        <br>
+                        <form action="">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" name="usuario" id="usuario">
+                            <br><br>
+                            <label for="clave">Contraseña</label>
+                            <input type="password" name="clave" id="clave">
+                            <br><br>
+                            <input type="button" id="btnIngresarEstudiante" value="Ingresar al sistema de Estudiantes">
+                            <input type="button" id="btnIngresarDocente" value="Ingresar al sistema de Docentes">
+                            <br><br>
+                            <input type="button" id="btnRegistrar" value="Registrar Cuenta">
+                            <br><br>
+                        </form>
+            </table>
+        </center>
+    </div>
+    <script src="proyectos.js"></script>
+    <script src="usuario.js"></script>
+    <script src="usuarios.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
